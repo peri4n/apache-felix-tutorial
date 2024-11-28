@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>tutorial.felix</groupId>
-  <artifactId>example2</artifactId>
+  <artifactId>example2b</artifactId>
   <packaging>bundle</packaging>
   <version>0.1</version>
-  <name>example2</name>
+  <name>example2b</name>
   <url>http://maven.apache.org</url>
 
   <parent>
@@ -24,6 +24,11 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>tutorial.felix</groupId>
+        <artifactId>example2</artifactId>
+        <version>0.1</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -34,9 +39,9 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Import-Package>org.osgi.framework</Import-Package>
-            <Export-Package>tutorial.felix.example2.service.DictionaryService</Export-Package>
-            <Bundle-Activator>tutorial.felix.example2.Activator</Bundle-Activator>
+            <Import-Package>org.osgi.framework,tutorial.felix.example2.service</Import-Package>
+            <Export-Package>tutorial.felix.example2b.service</Export-Package>
+            <Bundle-Activator>tutorial.felix.example2b.Activator</Bundle-Activator>
           </instructions>
         </configuration>
       </plugin>

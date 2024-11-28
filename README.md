@@ -2,25 +2,13 @@
 
 Code to follow along the Apache Felix Tutorial
 
-## Chapter 1
+Each sub folder contains one of the bundles created in the tutorial.
 
-Start the Felix Shell by running `felix`.
+## Building all bundles
 
-### Starting the bundle
+You can build all bundles by running:
 
-You can start the bundle by running:
-
-```sh
-start filet:example1/target/example1-1.0-SNAPSHOT.jar
 ```
-
-Notice the logging statement.
-
-### Stopping the bundle
-
-You can also stop the bundle by running:
-
-```sh
-stop filet:example1/target/example1-1.0-SNAPSHOT.jar
+mvn org.apache.felix:maven-bundle-plugin:bundle
 ```
 
