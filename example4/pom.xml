@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tutorial.felix</groupId>
+  <artifactId>example4</artifactId>
+  <packaging>bundle</packaging>
+  <version>0.1</version>
+  <name>example4</name>
+  <url>http://maven.apache.org</url>
+
+  <parent>
+    <groupId>tutorial.felix</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>tutorial.felix</groupId>
+        <artifactId>example2</artifactId>
+        <version>0.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Import-Package>org.osgi.framework,tutorial.felix.example2.service</Import-Package>
+            <Bundle-Activator>tutorial.felix.example4.Activator</Bundle-Activator>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
