@@ -1,13 +1,11 @@
-package tutorial.example2;
+package tutorial.felix.example2;
 
 import java.util.Hashtable;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceListener;
-import org.osgi.framework.ServiceEvent;
 
-import tutorial.example2.service.DictionaryService;
+import tutorial.felix.example2.service.DictionaryService;
 
 /**
  * This class implements a simple bundle that uses the bundle

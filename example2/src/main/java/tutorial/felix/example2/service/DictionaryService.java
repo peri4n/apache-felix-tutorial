@@ -1,4 +1,4 @@
-package tutorial.example2.service;
+package tutorial.felix.example2.service;
 
 /**
  * A simple service interface that defines a dictionary service.

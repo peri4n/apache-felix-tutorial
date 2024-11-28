@@ -7,7 +7,14 @@
   <version>1.0-SNAPSHOT</version>
   <name>example1</name>
   <url>http://maven.apache.org</url>
-    <dependencies>
+
+  <parent>
+    <groupId>tutorial.felix</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
     <dependency>
       <groupId>org.apache.felix</groupId>
       <artifactId>org.osgi.core</artifactId>
@@ -29,7 +36,7 @@
         <configuration>
           <instructions>
             <Import-Package>org.osgi.framework</Import-Package>
-            <Bundle-Activator>tutorial.example1.Activator</Bundle-Activator>
+            <Bundle-Activator>tutorial.felix.example1.Activator</Bundle-Activator>
           </instructions>
         </configuration>
       </plugin>

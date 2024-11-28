@@ -1,8 +1,4 @@
-/*
- * Apache Felix OSGi tutorial.
-**/
-
-package tutorial.example1;
+package tutorial.felix.example1;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
