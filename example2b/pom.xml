@@ -40,7 +40,6 @@
         <configuration>
           <instructions>
             <Import-Package>org.osgi.framework,tutorial.felix.example2.service</Import-Package>
-            <Export-Package>tutorial.felix.example2b.service</Export-Package>
             <Bundle-Activator>tutorial.felix.example2b.Activator</Bundle-Activator>
           </instructions>
         </configuration>
